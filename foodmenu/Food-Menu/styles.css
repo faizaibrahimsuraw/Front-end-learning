@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Navbar */
+.navbar {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+.menu-items {
+    list-style: none;
+}
+
+.menu-items li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+.menu-items a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hamburger-lines {
+    display: none;
+}
+
+/* Showcase */
+.showcase-area {
+    background: url('https://images.unsplash.com/photo-1611765083444-a3ce30f1c885?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.showcase-container {
+    max-width: 600px;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.btn-primary {
+    background: #e8491d;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background: #c43f19;
+}
+
+/* Food Section */
+#food {
+    padding: 2rem 0;
+}
+
+.food-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.food-type {
+    flex-basis: 30%;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.img-container {
+    position: relative;
+}
+
+.img-container img {
+    width: 100%;
+}
+
+.img-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    color: #fff;
+    width: 80%;
+    text-align: center;
+}
+
+.img-content h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* Food Menu */
+#food-menu {
+    padding: 2rem 0;
+}
+
+.food-menu-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.food-menu-item {
+    flex-basis: 30%;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.food-img img {
+    width: 100%;
+}
+
+.food-description {
+    padding: 1rem;
+}
+
+.food-title {
+    margin-bottom: 0.5rem;
+}
+
+.food-price {
+    font-size: 1.1rem;
+    color: #e8491d;
+}
+
+/* Testimonials */
+#testimonials {
+    padding: 2rem 0;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.testimonial-box {
+    flex-basis: 30%;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    background: #f4f4f4;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.customer-photo img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+.customer-name {
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+.star-rating {
+    margin: 0.5rem 0;
+}
+
+.fa-star {
+    color: #ffd700;
+}
+
+.testimonial-text {
+    font-style: italic;
+}
+
+/* Contact */
+#contact {
+    padding: 2rem 0;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-img img {
+    width: 100%;
+}
+
+.form-container {
+    flex-basis: 45%;
+}
+
+textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+#footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+    }
+
+    .menu-items {
+        display: none;
+        flex-direction: column;
+    }
+
+    .menu-items li {
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .hamburger-lines {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger-lines .line {
+        width: 30px;
+        height: 3px;
+        background: #fff;
+        margin: 6px 0;
+    }
+
+    .food-container, .food-menu-container, .testimonial-container, .contact-container {
+        flex-direction: column;
+    }
+
+    .food-type, .food-menu-item, .testimonial-box, .contact-img, .form-container {
+        flex-basis: 100%;
+    }
+}
